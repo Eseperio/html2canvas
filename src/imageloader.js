@@ -22,7 +22,7 @@ ImageLoader.prototype.findImages = function(nodes) {
         switch(container.node.nodeName) {
         case "IMG":
             return imageNodes.concat([{
-                args: [container.node.src],
+                args: [container.node.getAttribute("src")],
                 method: "url"
             }]);
         case "svg":
